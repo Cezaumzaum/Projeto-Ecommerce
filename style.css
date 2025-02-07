@@ -37,7 +37,7 @@ nav {
 
 .categories-section h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -45,7 +45,7 @@ nav {
 .categories-section .col-lg-2 a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

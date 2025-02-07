@@ -1,0 +1,27 @@
+#cookie-banner {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999; /* Mantém o banner acima de outros elementos */
+  transition: transform 0.3s ease; /* Animação ao aparecer */
+  transform: translateY(100%); /* Começa fora da tela */
+}
+
+#cookie-banner.show {
+  display: block; /* Mostra o banner */
+  transform: translateY(0); /* Move para dentro da tela */
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.btn {
+  margin-left: 15px;
+}

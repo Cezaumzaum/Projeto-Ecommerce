@@ -1,0 +1,216 @@
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .product-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffc107;
+        }
+        .btn-primary {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        .btn-primary:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        
+        .search-container {
+  position: relative;
+  width: 240px;
+  height: 50px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 8px 15px;
+  width: 200px;
+  height: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 94, 0, 0.1);
+}
+
+.search-bar::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff5e00, #913b0a, #ff5e00, #ce520a);
+  border-radius: 16px;
+  z-index: -1;
+  animation: borderGlow 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-bar:hover::before,
+.search-bar:focus-within::before {
+  opacity: 1;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.search-input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  transform: translateX(5px);
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(145deg, #ff5e00, #ce520a);
+  border-radius: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(255, 94, 0, 0.2);
+}
+
+.search-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #ce520a, #ff5e00);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-icon:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
+}
+
+.search-icon:active {
+  transform: translateY(1px) scale(0.95);
+}
+
+.search-icon svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.search-icon:hover svg {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.search-bar:hover {
+  background: rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(255, 94, 0, 0.2);
+}
+
+.search-bar:focus-within {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 94, 0, 0.3);
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 94, 0, 0.15) 0%,
+    rgba(206, 82, 10, 0.1) 30%,
+    transparent 70%
+  );
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  opacity: 0;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.2); }
+  100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+}
+
+.search-bar:focus-within ~ .glow {
+  opacity: 1;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.search-container:hover .glow {
+  opacity: 0.6;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efeito de partículas no hover do ícone */
+.search-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.search-icon:hover::before {
+  opacity: 1;
+}

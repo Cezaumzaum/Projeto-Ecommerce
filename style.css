@@ -1,0 +1,521 @@
+.body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  padding: 0.4%;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-inner {
+  min-height: 10%; /* Defina uma altura mínima para o carrossel */
+}
+
+.carousel-inner img {
+  width: 100%; /* Faz com que a imagem ocupe toda a largura do carrossel */
+  height: 70%; /* Faz com que a imagem ocupe toda a altura do carrossel */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+}
+
+.time-remaining {
+  font-size: 0.9em;
+  color: #ff0000; /* Cor vermelha para destaque */
+  text-align: center; /* Centraliza o texto */
+}
+
+.categories-section {
+  color: #de0000; /* Corrigido de font-color para color */
+  padding: 60px;
+  background-color: #f9f9f9; /* Fundo mais visível */
+}
+
+.categories-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.categories-section .col-lg-2 a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories-section .col-lg-2 a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categories-section .col-lg-2 img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.categories-section .col-lg-2 a:hover img {
+  transform: scale(1.1);
+}
+
+.categories-section .col-lg-2 p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+p {
+  color: #f0f0f0;
+}
+
+.alert-banner {
+  background-color: #ffcc00;
+  /* Cor de fundo amarelo */
+  color: #333;
+  /* Cor do texto */
+  padding: 10px;
+  /* Espaçamento interno */
+  text-align: center;
+  /* Centraliza o texto */
+  position: relative;
+  /* Para permitir o posicionamento do botão de fechar */
+  z-index: 1000;
+  /* Mantém o banner acima de outros conteúdos */
+  font-weight: bold;
+  /* Destaca o texto */
+}
+
+.alert-banner p {
+  margin: 0;
+  /* Remove margens padrão */
+}
+
+/* Estilo do botão de fechar (opcional) */
+.alert-banner button {
+  background: none;
+  /* Sem fundo */
+  border: none;
+  /* Sem borda */
+  color: #333;
+  /* Cor do texto */
+  font-size: 16px;
+  /* Tamanho da fonte */
+  cursor: pointer;
+  /* Cursor em forma de mão */
+  margin-left: 20px;
+  /* Espaçamento entre o texto e o botão */
+}
+.html {
+  scroll-behavior: smooth;
+}
+h1 {
+  color: #f0f0f0;
+  text-align: center;
+  margin-top: 50px;
+}
+/* From Uiverse.io by themrsami */ 
+.search-container {
+  position: relative;
+  width: 240px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+ background: transparent;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+    width: 200px;
+  height: 50px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: radial-gradient(circle at center, #913b0a,#ce520a 30%,#ff5e00 70%);
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-icon svg {
+  fill: #fff;
+}
+
+.search-icon:hover {
+  background-color: #000;
+}
+
+.search-bar:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 200%;
+  border-radius: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+
+.search-bar:hover + .glow {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.search-bar:focus-within + .glow {
+  transform: translate(-50%, -50%) scale(1.2);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+}
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .caixa-search {
+    width: 150px; /* Reduz o tamanho da caixa de pesquisa em telas menores */
+  }
+
+  .caixa-search:hover {
+    width: 200px; /* Expande menos em telas menores */
+  }
+
+  .caixa-texto {
+    font-size: 12px;
+    max-width: 100px;
+  }
+}
+/* Navbar */
+.navbar {
+  /* Cor de fundo inicial */
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s ease; /* Transição suave para toda a navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra inicial para dar profundidade */
+}
+
+/* Links da navbar */
+.nav-link {
+  color: #ce520a; /* Cor inicial dos links */
+  padding: 10px 15px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Transição suave para cor e posição */
+}
+
+.nav-link:hover {
+  color: #ff9237; /* Tom de laranja/vermelho AMD */
+  transform: translateY(-5px) scale(1.05); /* Efeito de levantar e aumentar no hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+/* Toggler (menu hambúrguer) */
+.navbar-toggler {
+  background-color: #008ee7;
+  border: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-toggler:hover {
+  background-color: #008ee7;
+  transform: scale(1.1); /* Efeito de aumentar o botão */
+}
+
+/* Sombra inicial */
+.navbar,
+.navbar-toggler {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler-icon {
+  transition: all 0.4s ease;
+}
+
+.navbar-toggler-icon:hover {
+  transform: rotate(360deg);
+}
+.form-control {
+  border-radius: 20px;
+  /* Borda arredondada */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+.btn-outline-success {
+  border-radius: 20px;
+  /* Borda arredondada */
+  border-color: #ffc107;
+  color: #ffc107;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #ffc107;
+  color: #343a40;
+  border-color: #ffc107;
+}
+
+.dropdown-menu {
+  background-color: #343a40;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+}
+
+.dropdown-item {
+  color: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #ffc107;
+  color: #343a40;
+}
+ 
+.faq-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #00c6fb;
+  background: radial-gradient(circle at center, #913b0a,#ce520a 30%,#ff5e00 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+  position: fixed; /* Mantém o botão fixo na tela */
+  bottom: 20px; /* Distância do fundo da tela */
+  right: 20px; /* Distância da direita da tela */;
+  z-index: 1000;
+}
+.faq-button svg {
+  height: 1.5em;
+  fill: white;
+}
+.faq-button:hover svg {
+  animation: jello-vertical 0.7s both;
+}
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: -20px;
+  opacity: 0;
+  background-color: #ce520a;
+  background: radial-gradient(circle at center, #913b0a,#ce520a 30%,#ff5e00 70%);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color:  #692708;
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  bottom: -15%;
+  transition-duration: 0.3s;
+}
+
+.faq-button:hover .tooltip {
+  top: -40px;
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 30px 0;
+}
+
+.footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f8f9fa;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+.footer .social-icons a.facebook {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg")
+    no-repeat center center;
+  background-size: contain;
+}
+
+.footer .social-icons a.instagram {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png")
+    no-repeat center center;
+  background-size: contain;
+}
+
+.footer .social-icons a.twitter {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg")
+    no-repeat center center;
+  background-size: contain;
+}
+
+.footer .social-icons a.linkedin {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png")
+    no-repeat center center;
+  background-size: contain;
+}
+
+.footer .newsletter input[type="email"] {
+  border-radius: 20px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.footer .newsletter button {
+  border-radius: 20px;
+  background-color: #ffc107;
+  border: none;
+  padding: 5px 15px;
+  color: #343a40;
+  cursor: pointer;
+}
+
+.footer .newsletter button:hover {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.footer .logo img {
+  max-width: 40%;
+  margin-bottom: 20px;
+}
+
+ .alert-banner {
+      background-color: #ffcc00;
+      /* Cor de fundo amarelo */
+      color: #333;
+      /* Cor do texto */
+      padding: 10px;
+      /* Espaçamento interno */
+      text-align: center;
+      /* Centraliza o texto */
+      position: relative;
+      /* Para permitir o posicionamento do botão de fechar */
+      z-index: 1000;
+      /* Mantém o banner acima de outros conteúdos */
+      font-weight: bold;
+      /* Destaca o texto */
+    }
+
+    .alert-banner p {
+      margin: 0;
+      /* Remove margens padrão */
+    }
+
+    /* Estilo do botão de fechar (opcional) */
+    .alert-banner button {
+      background: none;
+      /* Sem fundo */
+      border: none;
+      /* Sem borda */
+      color: #333;
+      /* Cor do texto */
+      font-size: 16px;
+      /* Tamanho da fonte */
+      cursor: pointer;
+      /* Cursor em forma de mão */
+      margin-left: 20px;
+      /* Espaçamento entre o texto e o botão */
+    }

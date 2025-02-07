@@ -163,7 +163,7 @@ $result = $conn->query($sql);
     style="background: radial-gradient(circle at center, #00c6fb, #005bea 30%, #002758 70%);
   background-attachment: fixed;">
     <div class="container">
-      <h2 class="text-center mb-4">Categorias</h2>
+      <h2 class="text-center mb-4 text-whitegit push -u origin main">Categorias</h2>
       <div class="row text-center">
         <div class="col-lg-2 col-md-4 col-sm-6 mb-4 text-white">
         <a href="?cateegoria[]=Hardware">
